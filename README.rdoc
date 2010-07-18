@@ -1,0 +1,70 @@
+= Usage
+
+=== add
+Aliases: a
+
+Adds the specified files to the list of files to watch. Specifying -r
+recursively adds files, but this probably isn't what you want. It's better to
+use wildcards so you don't get any files you don't want.
+
+    checkpt add file1 file2 file3 dir1/*.pdf
+    checkpt add -r file1 file2 dir1/
+
+=== remove
+Aliases: r, rm
+
+Removes the specified files from the list of files to watch. Accepts -r just
+like add. Use -a flag to remove all and start fresh.
+
+    checkpt rm file1 file2 dir1/*.pdf
+    checkpt rm -r dir1/
+    checkpt rm -a
+
+=== status
+Aliases: s
+
+Shows a list of new files in the directory that are not currently being
+tracked. Takes the -r flag and directories to check recursively.
+
+    checkpt status
+    checkpt status -r new_stuff_in_here/
+
+=== check
+Aliases: c
+
+Mark the specified files as completed. Takes -r or -a flags.
+
+    checkpt check file1 file2 dir1/*.pdf
+    checkpt check -r dir1/
+    checkpt check -a
+
+=== uncheck
+Aliases: u
+
+Mark the specified files as incomplete. Takes -r or -a flags.
+
+    checkpt uncheck file1 file2 dir1/*.pdf
+    checkpt uncheck -r dir1/
+    checkpt uncheck -a
+
+=== next
+Aliases: n
+
+Attempts to guess the next item in the list you should address.
+
+    checkpt next
+
+=== last
+Aliases: l
+
+The last item you checked off the list
+
+    checkpt last
+
+=== progress
+Aliases: p
+
+Gives a report of your progress through the list.
+
+    checkpt progress
+
