@@ -1,6 +1,15 @@
+require 'yaml'
+
 module Checkpt
   module CLI
     class Main
+      attr_reader :state
+      class << self
+        def load_state
+          @state = YAML.load_file('.checkpt.yml')
+        end
+      end
+
       def initializer(args, input=STDIN, output=STDOUT, error=STDERR)
         @subcmd = args.shift
         @args = args
