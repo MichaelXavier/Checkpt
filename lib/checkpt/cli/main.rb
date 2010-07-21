@@ -1,4 +1,5 @@
 require 'yaml'
+require 'trollop'
 
 module Checkpt
   module CLI
@@ -8,8 +9,12 @@ module Checkpt
         def load_state
           @state = YAML.load_file('.checkpt.yml')
         end
+
+        def parser
+        end
       end
 
+      #TODO: needs to handle string args for testing purposes
       def initializer(args, input=STDIN, output=STDOUT, error=STDERR)
         @subcmd = args.shift
         @args = args
