@@ -1,6 +1,7 @@
 Given %(I am in an existing repository) do
   @input, @output = StringIO.new, StringIO.new
   stub(Checkpt::CLI::Main.load_state) {default_config}
+  FileUtils.touch('.checkpt.yml')
 end
 
 Given %(the repository has the following files:) do |table|

@@ -1,6 +1,3 @@
-require 'yaml'
-require 'trollop'
-
 module Checkpt
   module CLI
     class Main

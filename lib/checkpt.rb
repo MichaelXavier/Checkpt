@@ -1,5 +1,8 @@
 require 'rubygems'
 require 'yaml'
+require 'fileutils'
+require 'bundler'
+Bundler.require(:default)
 
 $:.unshift(File.dirname(__FILE__))
 

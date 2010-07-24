@@ -5,16 +5,16 @@ Feature: Add file to repository
 
   Background:
   Given I am in an existing repository
-    And the repository has the following files:
-      | path         |
-      | episode1.avi |
-      | episode2.avi |
-      | episode3.avi |
-      | episode4.avi |
-    And the following files are checked in:
-      | path         |
-      | episode1.avi |
-      | episode2.avi |
+  #    And the repository has the following files:
+  #      | path         |
+  #      | episode1.avi |
+  #      | episode2.avi |
+  #      | episode3.avi |
+  #      | episode4.avi |
+  #    And the following files are checked in:
+  #      | path         |
+  #      | episode1.avi |
+  #      | episode2.avi |
 
   @wip
   Scenario: Adding a file that already exists
